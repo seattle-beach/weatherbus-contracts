@@ -16,5 +16,6 @@
       "Access-Control-Allow-Origin": "http://something-very-specific.example.com:1234"
     },
     "data": ""
-  }
+  },
+  "provides": "user 'contractuser' exists"
 }

@@ -3,9 +3,5 @@
 # Assumes that golden-gardens is in ../golden-gardens and there is a freshly restarted
 # weatherbus with an empty database at http://localhost:8080.
 
-for c in addUser addStop stops-for-user stop; do
-  echo "Trying $c"
-  ../golden-gardens/test-service http://localhost:8080 "${c}/contract.json"
-done
-
+../golden-gardens/test-service http://localhost:8080 */contract.json
 echo "All passed."

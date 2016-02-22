@@ -1,4 +1,5 @@
 {
+  "precondition": "user 'contractuser' has stops",
   "request": {
     "method": "get",
     "path": "/users/stops?username=contractuser",
