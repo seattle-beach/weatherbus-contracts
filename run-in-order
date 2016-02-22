@@ -5,7 +5,7 @@
 
 for c in addUser addStop stops-for-user stop; do
   echo "Trying $c"
-  ../golden-gardens/test-service "${c}/contract.json" http://localhost:8080
+  ../golden-gardens/test-service http://localhost:8080 "${c}/contract.json"
 done
 
 echo "All passed."
