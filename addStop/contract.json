@@ -2,12 +2,18 @@
   "request": {
     "method": "post",
     "path": "/users/contractuser/stops",
-    "headers": {"Content-type": "application/json"},
+    "headers": {
+      "Content-type": "application/json",
+      "Origin": "http://something-very-specific.example.com:1234"
+    },
     "json-body": {"stopId": "1_619"}
   },
   "response": {
     "type": "literal-text",
-    "content-type": "text/plain;charset=UTF-8",
+    "headers": {
+      "Content-type": "text/plain;charset=UTF-8",
+      "Access-Control-Allow-Origin": "http://something-very-specific.example.com:1234"
+    },
     "data": ""
   }
 }

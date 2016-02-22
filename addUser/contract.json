@@ -2,13 +2,19 @@
   "request": {
     "method": "post",
     "path": "/users",
-    "headers": {"Content-type": "application/json"},
+    "headers": {
+      "Content-type": "application/json",
+      "Origin": "http://something-very-specific.example.com:1234"
+    },
     "json-body": {"username": "contractuser"}
   },
   "response": {
     "status": 201,
     "type": "literal-text",
-    "content-type": "text/plain;charset=UTF-8",
+    "headers": {
+      "content-type": "text/plain;charset=UTF-8",
+      "Access-Control-Allow-Origin": "http://something-very-specific.example.com:1234"
+    },
     "data": ""
   }
 }

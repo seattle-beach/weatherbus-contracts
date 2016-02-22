@@ -2,12 +2,15 @@
   "request": {
     "method": "get",
     "path": "/users/stops?username=contractuser",
-    "headers": {"Accept": "application/json"}
+    "headers": {
+      "Accept": "application/json",
+      "Origin": "http://something-very-specific.example.com:1234"
+    }
   },
   "response": {
     "type": "json-schema",
     "headers": {
-      "Access-Control-Allow-Origin": "*"
+      "Access-Control-Allow-Origin": "http://something-very-specific.example.com:1234"
     },
     "data": {
       "type": "array",
