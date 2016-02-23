@@ -7,7 +7,7 @@
     "response": {
       "status": 200,
       "headers": {
-        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Origin": "http://something-very-specific.example.com:1234",
         "Content-Type": "application/json"
       },
       "data": [{"id":"1_619","name":"4th Ave S & S Jackson St"}]
