@@ -3,5 +3,5 @@
 # Assumes that golden-gardens is in ../golden-gardens and there is a freshly restarted
 # weatherbus with an empty database at http://localhost:8080.
 
-../golden-gardens/test-service http://localhost:8080 */contract.json
+../golden-gardens/test-service http://localhost:8080 contracts/prime/*.json
 echo "All passed."
