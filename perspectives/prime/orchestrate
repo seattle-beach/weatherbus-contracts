@@ -1,32 +1,43 @@
-#!/bin/bash -e
+#!/usr/bin/env ruby
+require 'net/http'
 
-started() {
-  result=`curl http://localhost:8080/healthcheck 2>/dev/null`
-  [ " $result" == " ok" ]
-}
+def started
+  begin
+    Net::HTTP.get(URI('http://localhost:8080/healthcheck')) == 'ok'
+  rescue Errno::ECONNREFUSED
+    false
+  end
+end
 
-echo "Building service"
-pushd ../weatherbus > /dev/null
-echo "Starting service"
-./gradlew build > /dev/null
+orig_dir = Dir.pwd
+Dir.chdir('../weatherbus')
+puts 'Building weatherbus'
+if !system('./gradlew', 'build', {:out => '/dev/null'})
+  exit(1)
+end
+
+if started
+  puts 'There is already a running weatherbus.'
+  exit(1)
+end
+
+puts 'Starting weatherbus'
 # TODO: pass --spring.profiles.active=goldengardens  after the jar once we have isolation working
-java -jar build/libs/weatherbus-SNAPSHOT.jar > /dev/null 2>&1 &
-popd > /dev/null
-trap 'kill %1' SIGINT SIGTERM 
-echo "Waiting for service to start"
+pid = spawn('java', '-jar', 'build/libs/weatherbus-SNAPSHOT.jar', {:out => '/dev/null'})
 
-while ! started; do
-  sleep 1
-done
+begin
+  puts 'Waiting for weatherbus to start'
+  
+  while !started
+    sleep 1
+  end
 
-echo "Verifying contracts"
-if perspectives/prime/verify-contracts; then
-  s=0
-else
-  s=1
-fi
-
-status=$?
-kill %1
-wait
-exit $s
+  Dir.chdir(orig_dir) 
+  if !system('perspectives/prime/verify-contracts')
+    exit(1)
+  end
+ensure
+  puts 'Stopping weatherbus'
+  Process.kill('TERM', pid)
+  Process.waitpid(pid)
+end
