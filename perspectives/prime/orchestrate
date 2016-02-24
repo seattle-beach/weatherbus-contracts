@@ -1,0 +1,32 @@
+#!/bin/bash -e
+
+started() {
+  result=`curl http://localhost:8080/healthcheck 2>/dev/null`
+  [ " $result" == " ok" ]
+}
+
+echo "Building service"
+pushd ../weatherbus > /dev/null
+echo "Starting service"
+./gradlew build > /dev/null
+# TODO: pass --spring.profiles.active=goldengardens  after the jar once we have isolation working
+java -jar build/libs/weatherbus-SNAPSHOT.jar > /dev/null 2>&1 &
+popd > /dev/null
+trap 'kill %1' SIGINT SIGTERM 
+echo "Waiting for service to start"
+
+while ! started; do
+  sleep 1
+done
+
+echo "Verifying contracts"
+if perspectives/prime/verify-contracts; then
+  s=0
+else
+  s=1
+fi
+
+status=$?
+kill %1
+wait
+exit $s
