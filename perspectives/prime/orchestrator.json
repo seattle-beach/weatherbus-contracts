@@ -16,7 +16,7 @@
     "bus" : {
       "port": 8002,
       "contracts": [ "contracts/bus/*.json" ],
-      "responses": "perspectives/prime/bus-responses/stop.json"
+      "responses": "perspectives/prime/bus-responses.json"
     }
   }
 }
