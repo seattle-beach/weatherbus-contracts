@@ -1,0 +1,32 @@
+{
+  "request": {
+    "method": "get",
+    "path": "/api/forecast?lat=45&lng=110"
+  },
+  "response": {
+    "type": "json-schema",
+    "data": {
+      "type": "object",
+      "required": ["latitude", "longitude", "forecast"],
+      "properties": {
+        "latitude": { "type": "number", "enum": [45.0] },
+        "longitude": { "type": "number", "enum": [110.0] },
+        "forecast": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["time_epoch", "temp", "climacon_url", "climacon"],
+            "properties": {
+              "climacon_url": { "type": "string" },
+              "climacon": { "type": "string" },
+              "time_epoch": { "type": "number" },
+              "temp": { "type": "number" },
+              "climacon_url": { "type": "string" },
+              "climacon": { "type": "string" }
+            }
+          }
+        }
+      }
+    }
+  }
+}
