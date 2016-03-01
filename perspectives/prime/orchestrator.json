@@ -13,6 +13,11 @@
   },
   "contracts": ["contracts/prime/*.json" ],
   "mocks": {
+    "weather" : {
+      "port": 8001,
+      "contracts": [ "contracts/weather/*.json" ],
+      "responses": "perspectives/prime/weather-responses.json"
+    },
     "bus" : {
       "port": 8002,
       "contracts": [ "contracts/bus/*.json" ],

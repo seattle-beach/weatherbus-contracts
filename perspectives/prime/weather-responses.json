@@ -1,0 +1,39 @@
+[
+  {
+    "request": {
+      "method": "GET",
+      "path": "/api/temp?lat=47.599827&lng=-122.328972"
+    },
+    "response": {
+      "status": 200,
+      "headers": { "Content-Type": "application/json" },
+      "data": {
+        "latitude": 47.599827,
+        "longitude": -122.328972,
+        "temp": 28.0,
+        "climacon_url": "http://localhost:9090/assets/Sun.svg",
+        "climacon": "CLEAR_DAY"
+      }
+    }
+  },
+  {
+    "request": {
+      "method": "GET",
+      "path": "/api/forecast?lat=47.599827&lng=-122.328972"
+    },
+    "response": {
+      "status": 200,
+      "headers": { "Content-Type": "application/json" },
+      "data": {
+        "latitude": 47.599827,
+        "longitude": -122.328972,
+        "forecast": [
+          {"time_epoch":1456862400,"temp":25.0,"climacon_url":"http://localhost:9090/assets/Cloud-Sun.svg","climacon":"PARTLY_CLOUDY"},
+          {"time_epoch":1456866000,"temp":24.0,"climacon_url":"http://localhost:9090/assets/Sun.svg","climacon":"CLEAR_DAY"},
+          {"time_epoch":1456869600,"temp":23.0,"climacon_url":"http://localhost:9090/assets/Sun.svg","climacon":"CLEAR_DAY"},
+          {"time_epoch":1456873200,"temp":20.0,"climacon_url":"http://localhost:9090/assets/Cloud-Sun.svg","climacon":"PARTLY_CLOUDY"}
+        ]
+      }
+    }
+  }
+]

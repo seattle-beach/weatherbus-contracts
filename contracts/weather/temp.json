@@ -1,7 +1,7 @@
 {
   "request": {
     "method": "get",
-    "path": "/api/temp?lat=45&lng=110"
+    "path": "/api/temp?lat=47.599827&lng=-122.328972"
   },
   "response": {
     "type": "json-schema",
@@ -9,8 +9,8 @@
       "type": "object",
       "required": ["latitude", "longitude", "temp", "climacon_url", "climacon"],
       "properties": {
-        "latitude": { "type": "number", "enum": [45.0] },
-        "longitude": { "type": "number", "enum": [110.0] },
+        "latitude": { "type": "number", "enum": [47.599827] },
+        "longitude": { "type": "number", "enum": [-122.328972] },
         "temp": { "type": "number" },
         "climacon_url": { "type": "string" },
         "climacon": { "type": "string" }
