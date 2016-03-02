@@ -11,34 +11,36 @@
     "headers": {
       "Access-Control-Allow-Origin": "http://something-very-specific.example.com:1234"
     },
-    "type": "json-schema",
-    "data": {
-      "type": "object",
-      "required": ["data"],
-      "properties": {
-        "data": {
-          "type": "object",
-          "required": ["latitude", "longitude", "stopId", "departures"],
-          "properties": {
-            "latitude": { "type": "number", "minimum": -90, "maximum": 90 },
-            "longitude": { "type": "number", "minimum": -180, "maximum": 180 },
-            "stopId": {
-              "type": "string",
-              "enum": ["1_619"]
-            },
-            "departures": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "required": ["temp", "climacon_url", "climacon", "routeShortName", "headsign", "predictedTime", "scheduledTime"],
-                "properties": {
-                  "temp": { "type": "number" },
-                  "climacon_url": { "type": "string" },
-                  "climacon": { "type": "string" },
-                  "routeShortName": { "type": "string" },
-                  "headsign": { "type": "string" },
-                  "predictedTime": { "type": ["number", "null"] },
-                  "scheduledTime": { "type": "number" }
+    "body": {
+      "type": "json-schema",
+      "data": {
+        "type": "object",
+        "required": ["data"],
+        "properties": {
+          "data": {
+            "type": "object",
+            "required": ["latitude", "longitude", "stopId", "departures"],
+            "properties": {
+              "latitude": { "type": "number", "minimum": -90, "maximum": 90 },
+              "longitude": { "type": "number", "minimum": -180, "maximum": 180 },
+              "stopId": {
+                "type": "string",
+                "enum": ["1_619"]
+              },
+              "departures": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": ["temp", "climacon_url", "climacon", "routeShortName", "headsign", "predictedTime", "scheduledTime"],
+                  "properties": {
+                    "temp": { "type": "number" },
+                    "climacon_url": { "type": "string" },
+                    "climacon": { "type": "string" },
+                    "routeShortName": { "type": "string" },
+                    "headsign": { "type": "string" },
+                    "predictedTime": { "type": ["number", "null"] },
+                    "scheduledTime": { "type": "number" }
+                  }
                 }
               }
             }

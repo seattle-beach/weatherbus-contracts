@@ -5,21 +5,23 @@
     "headers": { "Accept": "application/json" }
   },
   "response": {
-    "type": "json-schema",
-    "data": {
-      "type": "object",
-      "required": ["data"],
-      "properties": {
-        "data": {
-          "type": "array",
-          "items": {
-            "type":"object",
-            "required": ["routeShortName", "headsign", "predictedTime", "scheduledTime"],
-            "properties": {
-              "routeShortName": { "type": "string" },
-              "headsign": { "type": "string" },
-              "predictedTime": { "type": ["number", "null"] },
-              "scheduledTime": { "type": "number" }
+    "body": {
+      "type": "json-schema",
+      "data": {
+        "type": "object",
+        "required": ["data"],
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "type":"object",
+              "required": ["routeShortName", "headsign", "predictedTime", "scheduledTime"],
+              "properties": {
+                "routeShortName": { "type": "string" },
+                "headsign": { "type": "string" },
+                "predictedTime": { "type": ["number", "null"] },
+                "scheduledTime": { "type": "number" }
+              }
             }
           }
         }

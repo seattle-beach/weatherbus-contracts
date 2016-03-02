@@ -9,18 +9,20 @@
     }
   },
   "response": {
-    "type": "json-schema",
     "headers": {
       "Access-Control-Allow-Origin": "http://something-very-specific.example.com:1234"
     },
-    "data": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "required": ["id", "name"],
-        "properties": {
-          "id": { "type": "string" },
-          "name": { "type": "string" }
+    "body": {
+      "type": "json-schema",
+      "data": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": ["id", "name"],
+          "properties": {
+            "id": { "type": "string" },
+            "name": { "type": "string" }
+          }
         }
       }
     }

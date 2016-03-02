@@ -4,16 +4,18 @@
     "path": "/api/temp?lat=47.599827&lng=-122.328972"
   },
   "response": {
-    "type": "json-schema",
-    "data": {
-      "type": "object",
-      "required": ["latitude", "longitude", "temp", "climacon_url", "climacon"],
-      "properties": {
-        "latitude": { "type": "number", "enum": [47.599827] },
-        "longitude": { "type": "number", "enum": [-122.328972] },
-        "temp": { "type": "number" },
-        "climacon_url": { "type": "string" },
-        "climacon": { "type": "string" }
+    "body": {
+      "type": "json-schema",
+      "data": {
+        "type": "object",
+        "required": ["latitude", "longitude", "temp", "climacon_url", "climacon"],
+        "properties": {
+          "latitude": { "type": "number", "enum": [47.599827] },
+          "longitude": { "type": "number", "enum": [-122.328972] },
+          "temp": { "type": "number" },
+          "climacon_url": { "type": "string" },
+          "climacon": { "type": "string" }
+        }
       }
     }
   }

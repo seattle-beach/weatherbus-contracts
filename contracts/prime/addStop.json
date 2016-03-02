@@ -11,11 +11,13 @@
     "json-body": {"stopId": "1_619"}
   },
   "response": {
-    "type": "literal-text",
     "headers": {
       "Content-type": "text/plain;charset=UTF-8",
       "Access-Control-Allow-Origin": "http://something-very-specific.example.com:1234"
     },
-    "data": ""
+    "body": {
+      "type": "literal-text",
+      "data": ""
+    }
   }
 }

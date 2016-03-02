@@ -4,25 +4,27 @@
     "path": "/api/forecast?lat=47.599827&lng=-122.328972"
   },
   "response": {
-    "type": "json-schema",
-    "data": {
-      "type": "object",
-      "required": ["latitude", "longitude", "forecast"],
-      "properties": {
-        "latitude": { "type": "number", "enum": [47.599827] },
-        "longitude": { "type": "number", "enum": [-122.328972] },
-        "forecast": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "required": ["time_epoch", "temp", "climacon_url", "climacon"],
-            "properties": {
-              "climacon_url": { "type": "string" },
-              "climacon": { "type": "string" },
-              "time_epoch": { "type": "number" },
-              "temp": { "type": "number" },
-              "climacon_url": { "type": "string" },
-              "climacon": { "type": "string" }
+    "body": {
+      "type": "json-schema",
+      "data": {
+        "type": "object",
+        "required": ["latitude", "longitude", "forecast"],
+        "properties": {
+          "latitude": { "type": "number", "enum": [47.599827] },
+          "longitude": { "type": "number", "enum": [-122.328972] },
+          "forecast": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["time_epoch", "temp", "climacon_url", "climacon"],
+              "properties": {
+                "climacon_url": { "type": "string" },
+                "climacon": { "type": "string" },
+                "time_epoch": { "type": "number" },
+                "temp": { "type": "number" },
+                "climacon_url": { "type": "string" },
+                "climacon": { "type": "string" }
+              }
             }
           }
         }
