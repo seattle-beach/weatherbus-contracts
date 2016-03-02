@@ -2,12 +2,7 @@
   "service": {
     "name": "weatherbus",
     "build": [ "sh", "-c", "cd ../weatherbus && ./gradlew build > /dev/null" ],
-    "run": [
-      "java",
-      "-jar",
-      "../weatherbus/build/libs/weatherbus-SNAPSHOT.jar",
-      "--spring.profiles.active=goldengardens"
-    ],
+    "run": [ "perspectives/prime/run-weatherbus" ],
     "url": "http://localhost:8080/",
     "isrunning": ["perspectives/prime/is-prime-running"]
   },
