@@ -1,7 +1,8 @@
 {
   "request": {
     "method": "get",
-    "path": "/api/temp?lat=47.599827&lng=-122.328972"
+    "path": "/api/temp",
+    "params": { "lat": "47.599827", "lng": "-122.328972" }
   },
   "response": {
     "body": {
