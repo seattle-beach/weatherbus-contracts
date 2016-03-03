@@ -1,0 +1,17 @@
+#!/bin/sh -e -o pipefail
+
+die() {
+  echo "$1"
+  exit 1
+}
+
+create_database() {
+  if ! output=`createdb wbpgg 2>&1`; then
+    if !  echo "$output" | fgrep 'database "wbpgg" already exists' > /dev/null; then
+      die "Failed to create database: $output"
+    fi
+  fi
+}
+
+(cd ../weatherbus && ./gradlew build > /dev/null)
+create_database

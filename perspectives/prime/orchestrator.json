@@ -1,7 +1,7 @@
 {
   "service": {
     "name": "weatherbus",
-    "build": [ "sh", "-c", "cd ../weatherbus && ./gradlew build > /dev/null" ],
+    "build": [ "perspectives/prime/build-weatherbus" ],
     "run": [
       "java",
       "-jar",
