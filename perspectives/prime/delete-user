@@ -1,0 +1,8 @@
+#!/bin/sh -e
+
+dburl=postgres://fmaqfszy:UI8gpO9yra9YaNxqqLvHPJQhlJAtGPYV@pellefant.db.elephantsql.com:5432/fmaqfszy
+
+psql -q -v ON_ERROR_STOP=1 $dburl << EOF
+DELETE FROM users_stops
+  WHERE weatherbus_user_id IN (SELECT id FROM weatherbus_user WHERE username = 'contractuser');
+DELETE FROM weatherbus_user WHERE username = 'contractuser';

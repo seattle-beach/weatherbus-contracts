@@ -1,0 +1,6 @@
+[
+  {
+    "provides": "user 'contractuser' does not exist",
+    "script": ["perspectives/prime/delete-user"]
+  }
+]

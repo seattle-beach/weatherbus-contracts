@@ -12,6 +12,7 @@
     "isrunning": ["perspectives/prime/is-prime-running"]
   },
   "contracts": ["contracts/prime/*.json" ],
+  "precondition-scripts": "perspectives/prime/precondition-scripts.json",
   "mocks": {
     "weather" : {
       "port": 8001,
