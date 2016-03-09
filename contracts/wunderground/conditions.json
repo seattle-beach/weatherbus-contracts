@@ -1,0 +1,25 @@
+{
+  "request": {
+    "method": "get",
+    "path": "/api/WUNDERGROUND_API_KEY/conditions/q/47.599827,-122.328972.json"
+  },
+  "response": {
+    "body": {
+      "type": "json-schema",
+      "data": {
+        "type": "object",
+        "required": ["current_observation"],
+        "properties": {
+          "current_observation": {
+            "type": "object",
+            "required": ["temp_f", "icon"],
+            "properties": {
+              "temp_f": { "type": "number" },
+              "icon": { "type": "string" }
+            }
+          }
+        }
+      }
+    }
+  }
+}

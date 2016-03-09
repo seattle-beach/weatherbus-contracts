@@ -1,0 +1,41 @@
+{
+  "request": {
+    "method": "get",
+    "path": "/api/WUNDERGROUND_API_KEY/hourly/q/47.599827,-122.328972.json"
+  },
+  "response": {
+    "body": {
+      "type": "json-schema",
+      "data": {
+        "type": "object",
+        "required": ["hourly_forecast"],
+        "properties": {
+          "hourly_forecast": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["FCTTIME", "temp", "icon"],
+              "properties": {
+                "temp": {
+                  "type": "object",
+                  "required": ["english"],
+                  "properties": { 
+                    "english": { "type": "string" }
+                  }
+                },
+                "icon": { "type": "string" },
+                "FCTTIME": {
+                  "type": "object",
+                  "required": ["epoch"],
+                  "properties": { 
+                    "epoch": { "type": "string" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

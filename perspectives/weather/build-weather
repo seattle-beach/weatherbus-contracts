@@ -1,0 +1,3 @@
+#!/bin/sh -e -o pipefail
+
+cd ../weatherbus-weather && ./gradlew build
