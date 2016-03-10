@@ -1,0 +1,28 @@
+GIT
+  remote: git@github.com:pivotal/golden-gardens.git
+  revision: 4d9cee232c98703f7cbbdf9d4d962d0fb98749d8
+  specs:
+    golden_gardens (0.0.0)
+      faraday (~> 0.9.2)
+      json-schema (~> 2.6.1)
+      rack (~> 1.6.4)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    addressable (2.3.8)
+    faraday (0.9.2)
+      multipart-post (>= 1.2, < 3)
+    json-schema (2.6.1)
+      addressable (~> 2.3.8)
+    multipart-post (2.0.0)
+    rack (1.6.4)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  golden_gardens!
+
+BUNDLED WITH
+   1.11.2
