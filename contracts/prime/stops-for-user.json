@@ -1,5 +1,5 @@
 {
-  "precondition": "user 'contractuser' has stops",
+  "precondition": "user 'contractuser' has stop 1_619",
   "request": {
     "method": "get",
     "path": "/users/stops?username=contractuser",
@@ -23,6 +23,10 @@
             "id": { "type": "string" },
             "name": { "type": "string" }
           }
+        },
+        "includes-literal": {
+          "id": "1_619",
+          "name": "4th Ave S & S Jackson St"
         }
       }
     }

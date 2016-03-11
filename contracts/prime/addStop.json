@@ -1,6 +1,6 @@
 {
   "precondition": "user 'contractuser' exists",
-  "provides": "user 'contractuser' has stops",
+  "provides": "user 'contractuser' has stop 1_619",
   "request": {
     "method": "post",
     "path": "/users/contractuser/stops",
