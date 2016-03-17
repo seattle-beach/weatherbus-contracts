@@ -21,8 +21,7 @@
   {
     "request": {
       "method": "GET",
-      "path": "/api/v1/departures?stopId=1_619",
-      "headers": { "Accept": "application/json" }
+      "path": "/api/v1/departures?stopId=1_619"
     },
     "response": {
       "status": 200,
