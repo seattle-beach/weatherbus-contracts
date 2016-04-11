@@ -1,0 +1,59 @@
+{
+  "request": {
+    "method": "get",
+    "path": "/api/where/arrivals-and-departures-for-stop/1_619.json?minutesBefore=5&minutesAfter=45&key=test"
+  },
+  "response": {
+    "body": {
+      "type": "json-schema",
+      "data": {
+        "type": "object",
+        "required": ["data"],
+        "properties": {
+          "data": {
+            "type": "object",
+            "required": [
+              "entry"
+            ],
+            "properties": {
+              "entry": {
+                "type": "object",
+                "required": [
+                  "arrivalsAndDepartures"
+                ],
+                "properties": {
+                  "arrivalsAndDepartures": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "routeShortName",
+                        "tripHeadsign",
+                        "predictedDepartureTime",
+                        "scheduledDepartureTime"
+                      ],
+                      "properties": {
+                        "routeShortName": {
+                          "type": "string"
+                        },
+                        "tripHeadsign": {
+                          "type": "string"
+                        },
+                        "predictedDepartureTime": {
+                          "type": "integer"
+                        },
+                        "scheduledDepartureTime": {
+                          "type": "integer"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

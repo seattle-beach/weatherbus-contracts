@@ -1,0 +1,53 @@
+{
+  "request": {
+    "method": "get",
+    "path": "/api/v1/stops?lat=47.599&lng=-122.334&latSpan=0.0184&lngSpan=0.0154"
+  },
+  "response": {
+    "body": {
+      "type": "json-schema",
+      "data": {
+        "type": "object",
+        "required": ["data"],
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["stopId", "name", "latitude", "longitude", "direction", "routeIds"],
+              "properties": {
+                "stopId": { "type": "string" },
+                "name": { "type": "string" },
+                "latitude": { "type": "number" },
+                "longitude": { "type": "number" },
+                "direction": { "type": "string" },
+                "routeIds": {
+                  "type": "array",
+                  "items": { "type": "string" }
+                }
+              }
+            }
+          },
+          "included": {
+            "type": "object",
+            "required": ["routes"],
+            "properties": {
+              "routes": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": ["id", "shortName", "longName"],
+                  "properties": {
+                    "id": { "type": "string" },
+                    "shortName": { "type": "string" },
+                    "longName": { "type": "string" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

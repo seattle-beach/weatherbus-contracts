@@ -1,0 +1,50 @@
+{
+  "request": {
+    "method": "get",
+    "path": "/api/where/stop/1_619.json?key=test"
+  },
+  "response": {
+    "body": {
+      "type": "json-schema",
+      "data": {
+        "type": "object",
+        "required": ["data"],
+        "properties": {
+          "data": {
+            "type": "object",
+            "required": ["entry", "references"],
+            "properties": {
+              "entry": {
+                "type": "object",
+                "required": ["id", "lat", "lon"],
+                "properties": {
+                  "id": { "type": "string" },
+                  "lat": { "type": "number" },
+                  "lon": { "type": "number" }
+                }
+              },
+              "references": {
+                "type": "object",
+                "required": ["routes"],
+                "properties": {
+                  "routes": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": ["id", "shortName", "longName"],
+                      "properties": {
+                        "id": { "type": "string" },
+                        "shortName": { "type": "string" },
+                        "longName": { "type": "string" }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
