@@ -1,0 +1,54 @@
+{
+  "request": {
+    "method": "get",
+    "path": "/api/where/stops-for-location.json?lat=47.599&lon=-122.334&latSpan=0.0184&lonSpan=0.0154&key=test"
+  },
+  "response": {
+    "body": {
+      "type": "json-schema",
+      "data": {
+        "type": "object",
+        "required": ["data"],
+        "properties": {
+          "data": {
+            "type": "object",
+            "required": ["list", "references"],
+            "properties": {
+              "list": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": ["id", "name", "lat", "lon"],
+                  "properties": {
+                    "id": { "type": "string" },
+                    "name": { "type": "string" },
+                    "lat": { "type": "number" },
+                    "lon": { "type": "number" }
+                  }
+                }
+              },
+              "references": {
+                "type": "object",
+                "required": ["routes"],
+                "properties": {
+                  "routes": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": ["id", "shortName", "longName"],
+                      "properties": {
+                        "id": { "type":  "string"},
+                        "shortName": { "type":  "string"},
+                        "longName": { "type":  "string"}
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

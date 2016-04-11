@@ -142,5 +142,67 @@
         "version": 2
       }
     }
+  },
+  {
+    "request": {
+      "method": "GET",
+      "path": "/api/where/stops-for-location.json?lat=47.599&lon=-122.334&latSpan=0.0184&lonSpan=0.0154&key=test"
+    },
+    "response": {
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "data": {
+        "code": 200,
+        "currentTime": 1460408527341,
+        "data": {
+          "limitExceeded": false,
+          "list": [
+            {
+              "code": "110",
+              "direction": "S",
+              "id": "1_110",
+              "lat": 47.601391,
+              "locationType": 0,
+              "lon": -122.334282,
+              "name": "1st Ave S & Yesler Way",
+              "routeIds": [
+                "1_100002",
+                "1_100227"
+              ],
+              "wheelchairBoarding": "UNKNOWN"
+            }
+          ],
+          "outOfRange": false,
+          "references": {
+            "routes": [
+              {
+                "agencyId": "1",
+                "color": "",
+                "description": "Capitol Hill - Downtown Seattle",
+                "id": "1_100002",
+                "longName": "",
+                "shortName": "10",
+                "textColor": "",
+                "type": 3,
+                "url": "http://metro.kingcounty.gov/schedules/010/n0.html"
+              },
+              {
+                "agencyId": "1",
+                "color": "",
+                "description": "Summit - Downtown Seattle",
+                "id": "1_100227",
+                "longName": "",
+                "shortName": "47",
+                "textColor": "",
+                "type": 3,
+                "url": "http://metro.kingcounty.gov/schedules/047/n0.html"
+              }
+            ]
+          }
+        }
+      }
+    }
   }
 ]
