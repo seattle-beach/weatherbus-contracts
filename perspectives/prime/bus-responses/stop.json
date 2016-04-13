@@ -1,0 +1,37 @@
+[
+  {
+    "request": {
+      "method": "GET",
+      "path": "/api/v1/stops/1_619"
+    },
+    "response": {
+      "status": 200,
+      "headers": { "Content-Type": "application/json" },
+      "data": {
+        "data": {
+          "stopId" :"1_619",
+          "name": "4th Ave S & S Jackson St",
+          "latitude": 47.599827,
+          "longitude": -122.328972,
+          "direction": "N"
+        }
+      }
+    }
+  },
+  {
+    "request": {
+      "method": "GET",
+      "path": "/api/v1/departures?stopId=1_619",
+      "headers": { "Accept": "application/json" }
+    },
+    "response": {
+      "status": 200,
+      "headers": { "Content-Type": "application/json" },
+      "data": {
+          "data":[
+            {"routeShortName":"28E","headsign":"BROADVIEW - Express","predictedTime":1456361811000,"scheduledTime":1456361529000},{"routeShortName":"18E","headsign":"NORTH BEACH","predictedTime":0,"scheduledTime":1456361828000},{"routeShortName":"26E","headsign":"EAST GREEN LAKE - Express","predictedTime":1456361840000,"scheduledTime":1456361767000},{"routeShortName":"40","headsign":"NORTHGATE FREMONT","predictedTime":1456361896000,"scheduledTime":1456361349000},{"routeShortName":"17E","headsign":"SUNSET HILL","predictedTime":1456361976000,"scheduledTime":1456361468000},{"routeShortName":"26","headsign":"EAST GREEN LAKE FREMONT","predictedTime":1456362003000,"scheduledTime":1456361949000},{"routeShortName":"40","headsign":"NORTHGATE FREMONT","predictedTime":1456362059000,"scheduledTime":1456361889000},{"routeShortName":"24","headsign":"MAGNOLIA SEATTLE CENTER","predictedTime":1456362066000,"scheduledTime":1456361647000},{"routeShortName":"15E","headsign":"BLUE RIDGE","predictedTime":1456362106000,"scheduledTime":1456362009000},{"routeShortName":"5E","headsign":"GREENWOOD - Express","predictedTime":1456362128000,"scheduledTime":1456362008000},{"routeShortName":"29","headsign":"BALLARD QUEEN ANNE","predictedTime":0,"scheduledTime":1456362186000},{"routeShortName":"19","headsign":"WEST MAGNOLIA","predictedTime":1456362227000,"scheduledTime":1456362127000},{"routeShortName":"17E","headsign":"SUNSET HILL","predictedTime":0,"scheduledTime":1456362248000},{"routeShortName":"33","headsign":"E MAGNOLIA SEATTLE CENTER","predictedTime":1456362283000,"scheduledTime":1456362247000},{"routeShortName":"5","headsign":"SHORELINE GREENWOOD","predictedTime":1456362351000,"scheduledTime":1456362368000},{"routeShortName":"28E","headsign":"BROADVIEW - Express","predictedTime":1456362392000,"scheduledTime":1456362249000},{"routeShortName":"40","headsign":"NORTHGATE FREMONT","predictedTime":1456362408000,"scheduledTime":1456362429000},{"routeShortName":"5E","headsign":"GREENWOOD - Express","predictedTime":1456362530000,"scheduledTime":1456362488000},{"routeShortName":"15E","headsign":"BLUE RIDGE","predictedTime":1456362551000,"scheduledTime":1456362609000},{"routeShortName":"18E","headsign":"NORTH BEACH","predictedTime":0,"scheduledTime":1456362608000},{"routeShortName":"24","headsign":"MAGNOLIA SEATTLE CENTER","predictedTime":1456362637000,"scheduledTime":1456362547000},{"routeShortName":"26E","headsign":"EAST GREEN LAKE - Express","predictedTime":1456362676000,"scheduledTime":1456362727000},{"routeShortName":"29","headsign":"BALLARD QUEEN ANNE","predictedTime":0,"scheduledTime":1456362786000},{"routeShortName":"28","headsign":"CARKEEK PARK FREMONT","predictedTime":1456362874000,"scheduledTime":1456362549000},{"routeShortName":"5E","headsign":"GREENWOOD - Express","predictedTime":1456362968000,"scheduledTime":1456362968000},{"routeShortName":"28E","headsign":"BROADVIEW - Express","predictedTime":0,"scheduledTime":1456362969000},{"routeShortName":"40","headsign":"NORTHGATE FREMONT","predictedTime":1456362969000,"scheduledTime":1456362969000},{"routeShortName":"17E","headsign":"SUNSET HILL","predictedTime":0,"scheduledTime":1456363207000},{"routeShortName":"15E","headsign":"BLUE RIDGE","predictedTime":0,"scheduledTime":1456363209000},{"routeShortName":"26","headsign":"EAST GREEN LAKE FREMONT","predictedTime":1456363259000,"scheduledTime":1456363149000},{"routeShortName":"29","headsign":"BALLARD QUEEN ANNE","predictedTime":0,"scheduledTime":1456363386000},{"routeShortName":"5","headsign":"SHORELINE GREENWOOD","predictedTime":1456363394000,"scheduledTime":1456363268000},{"routeShortName":"26E","headsign":"EAST GREEN LAKE - Express","predictedTime":0,"scheduledTime":1456363447000},{"routeShortName":"5E","headsign":"GREENWOOD - Express","predictedTime":0,"scheduledTime":1456363448000},{"routeShortName":"19","headsign":"WEST MAGNOLIA","predictedTime":1456363463000,"scheduledTime":1456363327000},{"routeShortName":"18E","headsign":"NORTH BEACH","predictedTime":0,"scheduledTime":1456363507000},{"routeShortName":"40","headsign":"NORTHGATE FREMONT","predictedTime":0,"scheduledTime":1456363509000},{"routeShortName":"15E","headsign":"BLUE RIDGE","predictedTime":0,"scheduledTime":1456363928000},{"routeShortName":"28","headsign":"CARKEEK PARK FREMONT","predictedTime":1456363931000,"scheduledTime":1456363749000},{"routeShortName":"29","headsign":"BALLARD QUEEN ANNE","predictedTime":0,"scheduledTime":1456363986000},{"routeShortName":"28E","headsign":"BROADVIEW - Express","predictedTime":0,"scheduledTime":1456364047000},{"routeShortName":"40","headsign":"NORTHGATE FREMONT","predictedTime":1456364049000,"scheduledTime":1456364049000},{"routeShortName":"5E","headsign":"GREENWOOD - Express","predictedTime":0,"scheduledTime":1456364287000},{"routeShortName":"40","headsign":"NORTHGATE FREMONT","predictedTime":1456364315000,"scheduledTime":1456364589000},{"routeShortName":"24","headsign":"MAGNOLIA SEATTLE CENTER","predictedTime":1456364324000,"scheduledTime":1456364046000},{"routeShortName":"17E","headsign":"SUNSET HILL","predictedTime":0,"scheduledTime":1456364407000},{"routeShortName":"5","headsign":"SHORELINE GREENWOOD","predictedTime":1456364690000,"scheduledTime":1456364227000},{"routeShortName":"124","headsign":"DOWNTOWN SEATTLE GEORGETOWN","predictedTime":1456364898000,"scheduledTime":1456364706000},{"routeShortName":"28","headsign":"CARKEEK PARK FREMONT","predictedTime":1456364960000,"scheduledTime":1456364949000},{"routeShortName":"26","headsign":"EAST GREEN LAKE FREMONT","predictedTime":1456364988000,"scheduledTime":1456364349000},{"routeShortName":"19","headsign":"WEST MAGNOLIA","predictedTime":0,"scheduledTime":1456365007000},{"routeShortName":"5","headsign":"SHORELINE GREENWOOD","predictedTime":1456365127000,"scheduledTime":1456365127000},{"routeShortName":"5E","headsign":"GREENWOOD - Express","predictedTime":0,"scheduledTime":1456365127000},{"routeShortName":"40","headsign":"NORTHGATE FREMONT","predictedTime":0,"scheduledTime":1456365129000},{"routeShortName":"29","headsign":"BALLARD QUEEN ANNE","predictedTime":0,"scheduledTime":1456365186000},{"routeShortName":"18E","headsign":"NORTH BEACH","predictedTime":0,"scheduledTime":1456365187000},{"routeShortName":"33","headsign":"E MAGNOLIA SEATTLE CENTER","predictedTime":0,"scheduledTime":1456365366000}
+          ]
+      }
+    }
+  }
+]

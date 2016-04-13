@@ -1,0 +1,26 @@
+{
+  "request": {
+    "method": "get",
+    "path": "/api/v1/stops/1_619"
+  },
+  "response": {
+    "body": {
+      "type": "json-schema",
+      "data": {
+        "type": "object",
+        "required": ["data"],
+        "properties": {
+          "data": {
+            "type": "object",
+            "required": ["stopId", "name", "latitude", "longitude", "direction"],
+            "stopId": { "type": "string", "enum": ["1_619"] },
+            "name": { "type": "string" },
+            "latitude": { "type": "number", "minimum": -90, "maximum": 90 },
+            "longitude": { "type": "number", "minimum": -180, "maximum": 180 },
+            "direction": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+}
