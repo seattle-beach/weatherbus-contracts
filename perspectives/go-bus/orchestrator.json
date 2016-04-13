@@ -1,0 +1,20 @@
+{
+  "service": {
+    "name": "weatherbus-bus",
+    "build": [ "perspectives/go-bus/build" ],
+    "run": [
+      "../go/src/github.com/seattle-beach/go-weatherbus-bus/go-weatherbus-bus",
+      "http://localhost:9091/"
+    ],
+    "url": "http://localhost:9090",
+    "isrunning": ["perspectives/go-bus/is-bus-running"]
+  },
+  "contracts": ["contracts/bus/*.json" ],
+  "mocks": {
+    "onebusaway": {
+      "port": 9091,
+      "contracts": [ "contracts/onebusaway/*.json" ],
+      "responses": "perspectives/bus/oba-responses.json"
+    }
+  }
+}

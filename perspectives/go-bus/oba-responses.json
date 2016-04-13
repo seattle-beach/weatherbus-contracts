@@ -1,0 +1,208 @@
+[
+  {
+    "request": {
+      "method": "GET",
+      "path": "/api/where/arrivals-and-departures-for-stop/1_619.json?minutesBefore=5&minutesAfter=45&key=test"
+    },
+    "response": {
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "data": {
+        "data": {
+          "entry": {
+            "arrivalsAndDepartures": [
+              {
+                "arrivalEnabled": true,
+                "blockTripSequence": 5,
+                "departureEnabled": true,
+                "distanceFromStop": -326.9569913128362,
+                "frequency": null,
+                "lastUpdateTime": 1460400916000,
+                "numberOfStopsAway": -1,
+                "predicted": true,
+                "predictedArrivalInterval": null,
+                "predictedArrivalTime": 0,
+                "predictedDepartureInterval": null,
+                "predictedDepartureTime": 0,
+                "routeId": "1_100229",
+                "routeLongName": "",
+                "routeShortName": "5",
+                "scheduledArrivalInterval": null,
+                "scheduledArrivalTime": 1460400786000,
+                "scheduledDepartureInterval": null,
+                "scheduledDepartureTime": 1460400786000,
+                "serviceDate": 1460358000000,
+                "situationIds": [],
+                "status": "default",
+                "stopId": "1_619",
+                "stopSequence": 1,
+                "tripHeadsign": "SHORELINE GREENWOOD",
+                "tripId": "1_30905174",
+                "tripStatus": {
+                  "activeTripId": "1_30905174",
+                  "blockTripSequence": 5,
+                  "closestStop": "1_531",
+                  "closestStopTimeOffset": 15,
+                  "distanceAlongTrip": 1149.5960595740617,
+                  "frequency": null,
+                  "lastKnownDistanceAlongTrip": 0,
+                  "lastKnownLocation": {
+                    "lat": 47.60219955444336,
+                    "lon": -122.33088684082031
+                  },
+                  "lastKnownOrientation": 0,
+                  "lastLocationUpdateTime": 0,
+                  "lastUpdateTime": 1460400916000,
+                  "nextStop": "1_531",
+                  "nextStopTimeOffset": 15,
+                  "orientation": 132.12611840387734,
+                  "phase": "in_progress",
+                  "position": {
+                    "lat": 47.60220819547964,
+                    "lon": -122.33089941770912
+                  },
+                  "predicted": true,
+                  "scheduleDeviation": 36,
+                  "scheduledDistanceAlongTrip": 1149.5960595740617,
+                  "serviceDate": 1460358000000,
+                  "situationIds": [],
+                  "status": "default",
+                  "totalDistanceAlongTrip": 18661.525335878443,
+                  "vehicleId": "1_2775"
+                },
+                "vehicleId": "1_2775"
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "request": {
+      "method": "GET",
+      "path": "/api/where/stop/1_619.json?key=test"
+    },
+    "response": {
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "data": {
+        "code": 200,
+        "currentTime": 1460401388377,
+        "data": {
+          "entry": {
+            "code": "619",
+            "direction": "N",
+            "id": "1_619",
+            "lat": 47.599827,
+            "locationType": 0,
+            "lon": -122.328972,
+            "name": "4th Ave S & S Jackson St",
+            "routeIds": [
+              "1_100229",
+              "1_100044"
+            ],
+            "wheelchairBoarding": "UNKNOWN"
+          },
+          "references": {
+            "routes": [
+              {
+                "agencyId": "1",
+                "color": "",
+                "description": "Shoreline CC to Greenwood to Downtown Seattle",
+                "id": "1_100229",
+                "longName": "",
+                "shortName": "5",
+                "textColor": "",
+                "type": 3,
+                "url": "http://metro.kingcounty.gov/schedules/005/n0.html"
+              },
+              {
+                "agencyId": "1",
+                "color": "",
+                "description": "Blue Ridge to Crown Hill to Downtown Seattle",
+                "id": "1_100044",
+                "longName": "",
+                "shortName": "15",
+                "textColor": "",
+                "type": 3,
+                "url": "http://metro.kingcounty.gov/schedules/015/n0.html"
+              }
+            ],
+            "situations": [],
+            "stops": [],
+            "trips": []
+          }
+        },
+        "text": "OK",
+        "version": 2
+      }
+    }
+  },
+  {
+    "request": {
+      "method": "GET",
+      "path": "/api/where/stops-for-location.json?lat=47.599&lon=-122.334&latSpan=0.0184&lonSpan=0.0154&key=test"
+    },
+    "response": {
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "data": {
+        "code": 200,
+        "currentTime": 1460408527341,
+        "data": {
+          "limitExceeded": false,
+          "list": [
+            {
+              "code": "110",
+              "direction": "S",
+              "id": "1_110",
+              "lat": 47.601391,
+              "locationType": 0,
+              "lon": -122.334282,
+              "name": "1st Ave S & Yesler Way",
+              "routeIds": [
+                "1_100002",
+                "1_100227"
+              ],
+              "wheelchairBoarding": "UNKNOWN"
+            }
+          ],
+          "outOfRange": false,
+          "references": {
+            "routes": [
+              {
+                "agencyId": "1",
+                "color": "",
+                "description": "Capitol Hill - Downtown Seattle",
+                "id": "1_100002",
+                "longName": "",
+                "shortName": "10",
+                "textColor": "",
+                "type": 3,
+                "url": "http://metro.kingcounty.gov/schedules/010/n0.html"
+              },
+              {
+                "agencyId": "1",
+                "color": "",
+                "description": "Summit - Downtown Seattle",
+                "id": "1_100227",
+                "longName": "",
+                "shortName": "47",
+                "textColor": "",
+                "type": 3,
+                "url": "http://metro.kingcounty.gov/schedules/047/n0.html"
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+]
