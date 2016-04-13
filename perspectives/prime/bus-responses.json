@@ -32,5 +32,40 @@
           ]
       }
     }
+  },
+  {
+    "request": {
+      "method": "GET",
+      "path": "/api/v1/stops?lat=47.599&lng=-122.334&latSpan=0.0184&lngSpan=0.0154"
+    },
+    "response": {
+      "status": 200,
+      "headers": { "Content-Type": "application/json" },
+      "data": {
+        "data":[
+          {
+            "stopId":"1_110",
+            "name":"1st Ave S & Yesler Way",
+            "latitude":47.601391,
+            "longitude":-122.334282,
+            "direction":"S",
+            "routeIds":[
+              "1_100002",
+              "1_100227",
+              "1_100348"
+            ]
+          }
+        ],
+        "included": {
+          "routes": [
+            {
+              "id":"1_100002",
+              "shortName":"10",
+              "longName":""
+            }
+          ]
+        }
+      }
+    }
   }
 ]
