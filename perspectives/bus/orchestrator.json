@@ -1,0 +1,17 @@
+{
+  "service": {
+    "name": "weatherbus-bus",
+    "build": [ "perspectives/bus/build-bus" ],
+    "run": [ "perspectives/bus/run-bus" ],
+    "url": "http://localhost:9090/",
+    "isrunning": ["perspectives/bus/is-bus-running"]
+  },
+  "contracts": ["contracts/bus/*.json" ],
+  "mocks": {
+    "wunderground": {
+      "port": 9091,
+      "contracts": [ "contracts/onebusaway/*.json" ],
+      "responses": "perspectives/bus/oba-responses.json"
+    }
+  }
+}
