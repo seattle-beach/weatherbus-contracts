@@ -1,0 +1,4 @@
+#!/bin/sh -e
+
+cd ../../../go/src/github.com/seattle-beach/go-weatherbus-bus
+go build main.go
