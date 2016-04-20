@@ -1,0 +1,30 @@
+{
+  "services": [
+    {
+      "name": "weatherbus",
+      "build": [ "perspectives/prime/build-weatherbus" ],
+      "run": [
+        "java",
+        "-jar",
+        "../weatherbus/build/libs/weatherbus-SNAPSHOT.jar",
+        "--spring.profiles.active=goldengardens"
+      ],
+      "url": "http://localhost:8080/",
+      "isrunning": ["perspectives/prime/is-prime-running"],
+      "contracts": ["contracts/prime/*.json" ],
+      "precondition-scripts": "perspectives/prime/precondition-scripts.json"
+    }
+  ],
+  "mocks": {
+    "weather" : {
+      "port": 8001,
+      "contracts": [ "contracts/weather/*.json" ],
+      "responses": "perspectives/prime/weather-responses.json"
+    },
+    "bus" : {
+      "port": 8002,
+      "contracts": [ "contracts/bus/*.json" ],
+      "responses": "perspectives/prime/bus-responses.json"
+    }
+  }
+}
