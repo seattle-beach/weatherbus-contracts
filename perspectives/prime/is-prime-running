@@ -1,4 +1,0 @@
-#!/bin/sh -e
-
-output=`curl http://localhost:8080/healthcheck 2> /dev/null`
-[ "$output" = "ok" ]

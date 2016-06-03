@@ -9,7 +9,10 @@
       "--spring.profiles.active=goldengardens"
     ],
     "url": "http://localhost:9090/",
-    "isrunning": ["perspectives/weather/is-weather-running"]
+    "isrunning": {
+      "url": "http://localhost:9090/healthcheck",
+      "response": "ok"
+    }
   },
   "contracts": ["contracts/weather/*.json" ],
   "mocks": {
