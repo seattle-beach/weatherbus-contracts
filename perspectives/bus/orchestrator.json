@@ -7,9 +7,9 @@
     "isrunning": {
       "url": "http://localhost:9090/healthcheck",
       "response": "weatherbus-bus ok"
-    }
+    },
+    "contracts": ["contracts/bus/*.json" ]
   },
-  "contracts": ["contracts/bus/*.json" ],
   "mocks": {
     "wunderground": {
       "port": 9091,

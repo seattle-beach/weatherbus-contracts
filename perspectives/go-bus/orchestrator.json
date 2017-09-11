@@ -10,9 +10,9 @@
     "isrunning": {
       "url": "http://localhost:9090/healthcheck",
       "response": "ok"
-    }
+    },
+    "contracts": ["contracts/bus/*.json" ]
   },
-  "contracts": ["contracts/bus/*.json" ],
   "mocks": {
     "onebusaway": {
       "port": 9091,

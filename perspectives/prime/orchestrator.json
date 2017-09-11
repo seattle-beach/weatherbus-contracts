@@ -12,10 +12,10 @@
     "isrunning": {
       "url": "http://localhost:8080/healthcheck",
       "response": "ok"
-    }
+    },
+    "contracts": ["contracts/prime/*.json" ],
+    "precondition-scripts": "perspectives/prime/precondition-scripts.json"
   },
-  "contracts": ["contracts/prime/*.json" ],
-  "precondition-scripts": "perspectives/prime/precondition-scripts.json",
   "mocks": {
     "weather" : {
       "port": 8001,

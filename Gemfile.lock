@@ -1,21 +1,19 @@
 PATH
   remote: ../golden-gardens
   specs:
-    golden_gardens (0.0.0)
-      faraday (~> 0.9.2)
-      json-schema (~> 2.6)
+    golden_gardens (1.0.0)
+      json-schema (~> 2.8)
       rack (~> 1.6)
 
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.3.8)
-    faraday (0.9.2)
-      multipart-post (>= 1.2, < 3)
-    json-schema (2.6.1)
-      addressable (~> 2.3.8)
-    multipart-post (2.0.0)
-    rack (1.6.4)
+    addressable (2.5.2)
+      public_suffix (>= 2.0.2, < 4.0)
+    json-schema (2.8.0)
+      addressable (>= 2.4)
+    public_suffix (3.0.0)
+    rack (1.6.8)
 
 PLATFORMS
   ruby
@@ -24,4 +22,4 @@ DEPENDENCIES
   golden_gardens!
 
 BUNDLED WITH
-   1.11.2
+   1.15.4

@@ -12,9 +12,9 @@
     "isrunning": {
       "url": "http://localhost:9090/healthcheck",
       "response": "ok"
-    }
+    },
+    "contracts": ["contracts/weather/*.json" ]
   },
-  "contracts": ["contracts/weather/*.json" ],
   "mocks": {
     "wunderground": {
       "port": 9091,
