@@ -1,17 +1,18 @@
 {
-  "service": {
-    "name": "weatherbus-bus",
-    "build": [ "perspectives/go-bus/build" ],
-    "run": [
-      "../go/src/github.com/seattle-beach/go-weatherbus-bus/go-weatherbus-bus",
-      "http://localhost:9091"
-    ],
-    "url": "http://localhost:9090",
-    "isrunning": {
-      "url": "http://localhost:9090/healthcheck",
-      "response": "ok"
-    },
-    "contracts": ["contracts/bus/*.json" ]
+  "services": {
+    "weatherbus-bus": {
+      "build": [ "perspectives/go-bus/build" ],
+      "run": [
+        "../go/src/github.com/seattle-beach/go-weatherbus-bus/go-weatherbus-bus",
+        "http://localhost:9091"
+      ],
+      "url": "http://localhost:9090",
+      "isrunning": {
+        "url": "http://localhost:9090/healthcheck",
+        "response": "ok"
+      },
+      "contracts": ["contracts/bus/*.json" ]
+    }
   },
   "mocks": {
     "onebusaway": {

@@ -1,19 +1,20 @@
 {
-  "service": {
-    "name": "weatherbus-weather",
-    "build": [ "perspectives/weather/build-weather" ],
-    "run": [
-      "java",
-      "-jar",
-      "../weatherbus-weather/build/libs/weatherbus-weather-0.0.1-SNAPSHOT.jar",
-      "--spring.profiles.active=goldengardens"
-    ],
-    "url": "http://localhost:9090/",
-    "isrunning": {
-      "url": "http://localhost:9090/healthcheck",
-      "response": "ok"
-    },
-    "contracts": ["contracts/weather/*.json" ]
+  "services": {
+    "weatherbus-weather": {
+      "build": [ "perspectives/weather/build-weather" ],
+      "run": [
+        "java",
+        "-jar",
+        "../weatherbus-weather/build/libs/weatherbus-weather-0.0.1-SNAPSHOT.jar",
+        "--spring.profiles.active=goldengardens"
+      ],
+      "url": "http://localhost:9090/",
+      "isrunning": {
+        "url": "http://localhost:9090/healthcheck",
+        "response": "ok"
+      },
+      "contracts": ["contracts/weather/*.json" ]
+    }
   },
   "mocks": {
     "wunderground": {

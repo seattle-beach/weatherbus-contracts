@@ -1,14 +1,15 @@
 {
-  "service": {
-    "name": "weatherbus-bus",
-    "build": [ "perspectives/bus/build-bus" ],
-    "run": [ "perspectives/bus/run-bus" ],
-    "url": "http://localhost:9090/",
-    "isrunning": {
-      "url": "http://localhost:9090/healthcheck",
-      "response": "weatherbus-bus ok"
-    },
-    "contracts": ["contracts/bus/*.json" ]
+  "services": {
+    "weatherbus-bus": {
+      "build": [ "perspectives/bus/build-bus" ],
+      "run": [ "perspectives/bus/run-bus" ],
+      "url": "http://localhost:9090/",
+      "isrunning": {
+        "url": "http://localhost:9090/healthcheck",
+        "response": "weatherbus-bus ok"
+      },
+      "contracts": ["contracts/bus/*.json" ]
+    }
   },
   "mocks": {
     "wunderground": {

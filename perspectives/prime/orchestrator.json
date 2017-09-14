@@ -1,20 +1,21 @@
 {
-  "service": {
-    "name": "weatherbus",
-    "build": [ "perspectives/prime/build-weatherbus" ],
-    "run": [
-      "java",
-      "-jar",
-      "../weatherbus/build/libs/weatherbus-SNAPSHOT.jar",
-      "--spring.profiles.active=goldengardens"
-    ],
-    "url": "http://localhost:8080/",
-    "isrunning": {
-      "url": "http://localhost:8080/healthcheck",
-      "response": "ok"
-    },
-    "contracts": ["contracts/prime/*.json" ],
-    "precondition-scripts": "perspectives/prime/precondition-scripts.json"
+  "services": {
+    "weatherbus": {
+      "build": [ "perspectives/prime/build-weatherbus" ],
+      "run": [
+        "java",
+        "-jar",
+        "../weatherbus/build/libs/weatherbus-SNAPSHOT.jar",
+        "--spring.profiles.active=goldengardens"
+      ],
+      "url": "http://localhost:8080/",
+      "isrunning": {
+        "url": "http://localhost:8080/healthcheck",
+        "response": "ok"
+      },
+      "contracts": ["contracts/prime/*.json" ],
+      "precondition-scripts": "perspectives/prime/precondition-scripts.json"
+    }
   },
   "mocks": {
     "weather" : {
